@@ -15,8 +15,9 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'admin'], function(){
         Route::post('/addsurvey', [SurveyController::class, 'addSurvey']);
-        Route::post('/addtype', [TypeController::class, 'addtype']);
-        Route::post('/addoption', [OptionController::class, 'addoption']);
+        Route::post('/addquestion', [TypeController::class, 'addQuestion']);
+        //Route::post('/addtype', [TypeController::class, 'addtype']);
+        Route::post('/addoption', [OptionController::class, 'addOption']);
         Route::post('/getanswer', [OptionController::class, 'getAnswersByQuestionId']);
     });
 
@@ -26,6 +27,8 @@ Route::group(['prefix' => 'v1'], function(){
     Route::post('/getquestions', [QuestionController::class, 'getQuestionBySurveyId']);
 
     Route::post('/getoptions', [QuestionController::class, 'getOptionByQuestionId']);
+
+    Route::post('/addanswer', [QuestionController::class, 'addAnswer']);
 
 
 

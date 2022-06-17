@@ -12,7 +12,7 @@ class SurveyController extends Controller
 
         return response()->json([
             "success" => true,
-            "items" => $survey
+            "survey" => $survey
         ], 200);
     }
 
@@ -22,7 +22,7 @@ class SurveyController extends Controller
 
         return response()->json([
             "success" => true,
-            "items" => $survey
+            "survey" => $survey
         ], 200);
     }
 
