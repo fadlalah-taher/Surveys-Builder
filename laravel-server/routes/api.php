@@ -17,12 +17,13 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/addsurvey', [SurveyController::class, 'addSurvey']);
         Route::post('/addtype', [TypeController::class, 'addtype']);
         Route::post('/addoption', [OptionController::class, 'addoption']);
+        Route::post('/getanswer', [OptionController::class, 'getAnswersByQuestionId']);
     });
 
     Route::get('/getsurveys', [SurveyController::class, 'getSurveys']);
     Route::post('/getsurvey', [SurveyController::class, 'getSurveyById']);
 
-    Route::post('/getquestions', [SurveyController::class, 'getQuestionBySurveyId']);
+    Route::post('/getquestions', [QuestionController::class, 'getQuestionBySurveyId']);
 
 
 
