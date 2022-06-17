@@ -21,12 +21,13 @@ const Register = ({onAdd}) => {
   };
 
   return (
+    <div className='right-container'>
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
         <label>Full Name</label>
         <input
           type="text"
-          placeholder={"Add Task"}
+          placeholder={"Full Name"}
           value={name}
           onChange={(e) => {
             setName(e.target.value);
@@ -60,6 +61,7 @@ const Register = ({onAdd}) => {
       
       <input type={"submit"} value="Register" className="btn btn-block" />
     </form>
+    </div>
   )
 }
 
