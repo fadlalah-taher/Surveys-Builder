@@ -12,7 +12,7 @@ class OptionController extends Controller
 
         return response()->json([
             "success" => true,
-            "items" => $options
+            "options" => $options
         ], 200);
     }
 }

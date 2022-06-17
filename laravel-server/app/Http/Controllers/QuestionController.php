@@ -16,7 +16,7 @@ class QuestionController extends Controller
 
         return response()->json([
             "success" => true,
-            "items" => $question
+            "question" => $question
         ], 200);
     }
 
@@ -26,7 +26,7 @@ class QuestionController extends Controller
 
         return response()->json([
             "success" => true,
-            "items" => $question
+            "question" => $question
         ], 200);
     }
 }
