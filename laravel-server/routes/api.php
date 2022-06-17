@@ -22,5 +22,9 @@ Route::group(['prefix' => 'v1'], function(){
     Route::get('/getsurveys', [SurveyController::class, 'getSurveys']);
     Route::post('/getsurvey', [SurveyController::class, 'getSurveyById']);
 
+    Route::post('/getquestions', [SurveyController::class, 'getQuestionBySurveyId']);
+
+
+
 
 });

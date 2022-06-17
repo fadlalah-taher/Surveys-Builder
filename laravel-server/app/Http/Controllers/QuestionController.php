@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -12,6 +13,16 @@ class QuestionController extends Controller
         $question->survey_id = $request->survey_id;
         $question->type = $request->type;
         $question->save();
+
+        return response()->json([
+            "success" => true,
+            "items" => $question
+        ], 200);
+    }
+
+    public function getQuestionBySurveyId(Request $request){
+        $id = $request->survey_id;
+        $question = Question::where('survey_id', $id)->get();
 
         return response()->json([
             "success" => true,
