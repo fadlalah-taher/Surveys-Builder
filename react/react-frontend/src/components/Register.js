@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const Register = ({onAdd}) => {
 
@@ -58,7 +59,6 @@ const Register = ({onAdd}) => {
             }}
           />
         </div>
-        
         <input type={"submit"} value="Register" className="btn btn-block" />
       </form>
     </div>

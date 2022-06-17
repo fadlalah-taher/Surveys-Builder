@@ -21,16 +21,40 @@ function App() {
     });
     const data = await res.json();
     console.log(data);
+    
     setUsers([...users, data]);
   };
 
   return (
     <BrowserRouter>
-    <div>
-    <Login/>
-      <Register onAdd={addTask} />
+    {/* <div> */}
+      <Routes>
+        <Route
+        path='/'
+        element={
+          <>
+          <Login />
+          {/* addTask={addTask} */}
+          </>
+        }
+        > 
+        </Route>
+        <Route
+        path='/Register'
+        element={
+          <>
+          <Register onAdd={addTask} />
+          </>
+        }
+        >
+        </Route>
+
+
+      </Routes>
+    
+    {/* <Register onAdd={addTask} /> */}
       
-    </div>
+    {/* </div> */}
     </BrowserRouter>
   );
 }

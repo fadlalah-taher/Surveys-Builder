@@ -1,7 +1,9 @@
 import { useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 
+import Register from './Register';
 
-const Login = () => {
+const Login = ({addTask}) => {
     const [email , setEmail] = useState("");
     const [password , setPwd] = useState("");
     //const [user , setUser] = useState("");
@@ -59,8 +61,8 @@ const Login = () => {
             }}
           />
         </div>
-        
         <input type={"submit"} value="Login" className="btn btn-block" />
+        <Link to="/Register">Register</Link>
       </form>
     </div>
   )
