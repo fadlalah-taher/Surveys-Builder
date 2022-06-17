@@ -25,6 +25,8 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::post('/getquestions', [QuestionController::class, 'getQuestionBySurveyId']);
 
+    Route::post('/getoptions', [QuestionController::class, 'getOptionByQuestionId']);
+
 
 
 
