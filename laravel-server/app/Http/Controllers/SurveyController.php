@@ -26,4 +26,17 @@ class SurveyController extends Controller
         ], 200);
     }
 
+    public function addSurvey(Request $request){
+        $survey = new Survey;
+        $survey->title = $request->title;
+        $survey->save();
+
+        return response()->json([
+            "success" => true,
+            "items" => $survey
+        ], 200);
+    }
+
+    
+
 }

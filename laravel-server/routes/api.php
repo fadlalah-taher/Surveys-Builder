@@ -19,4 +19,8 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/addoption', [OptionController::class, 'addoption']);
     });
 
+    Route::get('/getsurveys', [TypeController::class, 'getsurveys']);
+    Route::post('/getsurvey', [OptionController::class, 'getSurveyById']);
+
+
 });
