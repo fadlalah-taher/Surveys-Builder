@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SurveyController extends Controller
 {
-    public function getSurvey(){
+    public function getSurveys(){
         $survey = Survey::all();
 
         return response()->json([
@@ -36,7 +36,5 @@ class SurveyController extends Controller
             "items" => $survey
         ], 200);
     }
-
-    
 
 }

@@ -14,13 +14,13 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'admin'], function(){
-        Route::post('/addsurvey', [SurveyController::class, 'addsurvey']);
+        Route::post('/addsurvey', [SurveyController::class, 'addSurvey']);
         Route::post('/addtype', [TypeController::class, 'addtype']);
         Route::post('/addoption', [OptionController::class, 'addoption']);
     });
 
-    Route::get('/getsurveys', [TypeController::class, 'getsurveys']);
-    Route::post('/getsurvey', [OptionController::class, 'getSurveyById']);
+    Route::get('/getsurveys', [SurveyController::class, 'getSurveys']);
+    Route::post('/getsurvey', [SurveyController::class, 'getSurveyById']);
 
 
 });
