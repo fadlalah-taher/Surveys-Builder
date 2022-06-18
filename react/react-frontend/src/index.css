@@ -47,7 +47,12 @@ body {
 .btn:active {
   transform: scale(0.98);
 }
-
+.btn:hover{
+  box-shadow: 5px 10px #f4f4f4;
+}
+.btn--survey{
+  margin-bottom: 20px;
+}
 .btn-block {
   display: block;
   width: 80%;
@@ -181,4 +186,40 @@ form input:focus{
 footer {
   margin-top: 30px;
   text-align: center;
+}
+/* Display Survey*/
+.display-survey {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap:50px;
+}
+.display-survey .survey-card {
+  margin-top: 50px;
+  width: 32%;
+  height: 250px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  gap: 100px;
+  background-color: rgb(201, 225, 231);
+  /* background-color: #2577fd; */
+}
+.title-survey{
+  width: 100%;
+  /* background-color: rgb(66, 149, 194); */
+  background-color: black;
+  height: 60%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

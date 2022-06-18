@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './components/Login';
 import Register from './components/Register'
 import Nav from './components/Nav';
+import DisplaySurvey from './components/DisplaySurvey';
 import { useState } from "react";
 import AddSurvey from './components/AddSurvey';
 
@@ -60,6 +61,16 @@ function App() {
         element={
           <>
           <AddSurvey/>
+          </>
+        }
+        >
+
+        </Route>
+        <Route
+        path='/DisplaySurvey'
+        element={
+          <>
+          <DisplaySurvey/>
           </>
         }
         >
