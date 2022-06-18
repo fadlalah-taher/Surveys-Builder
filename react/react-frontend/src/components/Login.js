@@ -35,13 +35,15 @@ const Login = ({addTask}) => {
     })
     const data = await res.json();
     console.log(data['access_token']);
-    console.log(data);
+    console.log(data['email']);
+    //let email = data['email'];
    // setUsers([...users, data]);
 }
 
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={onLogin}>
+      <h1>Login</h1>
         <div className="form-control">
           {/* <label>Email</label> */}
           <input

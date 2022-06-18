@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Register from './components/Register'
 import Nav from './components/Nav';
 import { useState } from "react";
+import AddSurvey from './components/AddSurvey';
 
 //import Register from './components/Register';
 
@@ -54,7 +55,16 @@ function App() {
         }
         >
         </Route>
+        <Route
+        path='/AddSurvey'
+        element={
+          <>
+          <AddSurvey/>
+          </>
+        }
+        >
 
+        </Route>
 
       </Routes>
     

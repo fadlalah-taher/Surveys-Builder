@@ -25,6 +25,7 @@ const Register = ({onAdd}) => {
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={onSubmit}>
+        <h1>Sign Up</h1>
         <div className="form-control">
           <input
             type="text"
@@ -58,6 +59,8 @@ const Register = ({onAdd}) => {
           />
         </div>
         <input type={"submit"} value="Register" className="btn btn-block" />
+        <div className='divider'/>
+        <button className='btn btn-register'><Link className='link' to="/">Login</Link></button>
       </form>
     </div>
   )
