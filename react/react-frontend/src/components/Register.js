@@ -15,17 +15,17 @@ const Register = ({onAdd}) => {
       alert("Please add a task!");
       return;
     }
-    onAdd({ name,email, password});
+    onAdd({ name, email, password});
     setName("");
     setEmail("");
     setPassword("");
+    <Link to="/"></Link>
   };
 
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
-          <label>Full Name</label>
           <input
             type="text"
             placeholder={"Full Name"}
@@ -37,7 +37,6 @@ const Register = ({onAdd}) => {
         </div>
 
         <div className="form-control">
-          <label>Email</label>
           <input
             type="email"
             placeholder={"Email"}
@@ -49,7 +48,6 @@ const Register = ({onAdd}) => {
         </div>
 
         <div className="form-control">
-          <label>Password</label>
           <input
             type="password"
             placeholder={"Password"}

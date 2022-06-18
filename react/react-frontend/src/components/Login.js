@@ -22,19 +22,23 @@ const Login = ({addTask}) => {
       e.preventDefault();
       let item = {email,password};
       console.log(item);
-      const res = await fetch("http://127.0.0.1:8000/api/login", {
+      const res = await fetch("http://127.0.0.1:8000/api/v1/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
         "Accept": 'application/json'
       },
       body: JSON.stringify(item),
-    });
+    }).catch(function(error) {  
+
+      console.log('Request failed', error)  
+    })
     const data = await res.json();
+    console.log(data['access_token']);
     console.log(data);
    // setUsers([...users, data]);
-  
 }
+
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={onLogin}>
@@ -61,8 +65,10 @@ const Login = ({addTask}) => {
             }}
           />
         </div>
+        <div  className='forget'>Invalid email or password!</div>
         <input type={"submit"} value="Login" className="btn btn-block" />
-        <Link to="/Register">Register</Link>
+        <div className='divider'/>
+        <button className='btn btn-register'><Link className='link' to="/Register">Register</Link></button>
       </form>
     </div>
   )
