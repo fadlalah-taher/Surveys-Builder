@@ -8,11 +8,12 @@ const Register = ({onAdd}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [field, setField] = useState(false);
    //Add Data to Backend on Submit
    const onSubmit = (e) => {
     e.preventDefault();
     if (!name) {
-      alert("Please add a task!");
+      setField(true);
       return;
     }
     onAdd({ name, email, password});
@@ -58,6 +59,7 @@ const Register = ({onAdd}) => {
             }}
           />
         </div>
+        {field ? <div  className='forget'>Fill the fields !</div> : ""}
         <input type={"submit"} value="Register" className="btn btn-block" />
         <div className='divider'/>
         <button className='btn btn-register'><Link className='link' to="/">Login</Link></button>

@@ -18,6 +18,7 @@ function App() {
    // Initialize State
   const [surveys, setSurveys] = useState([]);
 
+
   // Initialize all tasks into state from backend at component load
   useEffect(() => {
     const getTasks = async () => {
