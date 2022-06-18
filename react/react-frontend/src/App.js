@@ -33,7 +33,9 @@ function App() {
     try {
       const res = await fetch("http://127.0.0.1:8000/api/v1/getsurveys");
       const data = await res.json();
-      return data;
+      console.log(data.survey);
+      return data.survey;
+      
     } catch (err) {
       console.log(err);
     }
@@ -93,6 +95,7 @@ function App() {
         element={
           <>
           <DisplaySurvey
+          
           surveys={surveys}
           />
           </>

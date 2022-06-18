@@ -3,14 +3,13 @@ import React from 'react'
 
 const DisplaySurvey = ({surveys}) => {
 
-
   return (
-    //<div className='display-survey'>
+    <div className='display-survey'>
     <>
       {surveys.map((survey) => (
         <div className='survey-card'>
             <div className='title-survey'>
-                <p>{survey.id}</p>
+                <p>{survey.title}</p>
             </div>
             <div>
                 <input type={"submit"} value="Start" className="btn btn--survey" />
@@ -18,7 +17,7 @@ const DisplaySurvey = ({surveys}) => {
         </div>
       ))}
       </>
-    //</div>
+    </div>
   )
 }
 
