@@ -223,3 +223,12 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
+  /* Media Query*/
+  @media (max-width: 869px) {
+    .display-survey {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
