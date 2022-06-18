@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 
+
 use App\Http\Controllers\OptionController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
@@ -24,7 +25,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/addquestion', [QuestionController::class, 'addQuestion']);
         //Route::post('/addtype', [TypeController::class, 'addtype']);
         Route::post('/addoption', [OptionController::class, 'addOption']);
-        Route::post('/getanswer', [OptionController::class, 'getAnswersByQuestionId']);
+        Route::post('/getanswer', [AnswerController::class, 'getAnswersByQuestionId']);
     });
 
     Route::get('/getsurveys', [SurveyController::class, 'getSurveys']);
