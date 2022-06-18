@@ -49,7 +49,7 @@ const Login = ({addTask}) => {
       let type = response.data["type"]
       console.log(type);
       console.log(user_id);
-      if(type == 1){
+      if(type === 1){
         //localStorage.setItem('token', user_id)
         console.log("True Admin");
         window.location = "/AddSurvey";

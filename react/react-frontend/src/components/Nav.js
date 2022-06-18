@@ -7,7 +7,7 @@ const Nav = () => {
       <div className='left'>
             <img className='logo' src={Logo} alt="Logo"/>
       </div>
-      <div></div>
+      <input type={"submit"} value="Logout" className="btn btn-logout" />
     </div>
   )
 }

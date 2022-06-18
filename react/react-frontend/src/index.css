@@ -63,6 +63,14 @@ body {
   background-color: #2577fd;
   margin-top: 20px;
 }
+.btn-logout{
+  background-color: #2577fd;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 20px 15px;
+  height: 60%;
+  margin-top: 20px;
+}
 .link{
   text-decoration: none;
   color: #f4f4f4;
