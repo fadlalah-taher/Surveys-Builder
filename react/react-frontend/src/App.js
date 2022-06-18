@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const getTasks = async () => {
       const surveyssFromServer = await fetchTasks();
-      console.log(surveyssFromServer);
+      //console.log(surveyssFromServer);
       setSurveys(surveyssFromServer);
     };
     getTasks();
@@ -33,7 +33,7 @@ function App() {
     try {
       const res = await fetch("http://127.0.0.1:8000/api/v1/getsurveys");
       const data = await res.json();
-      console.log(data.survey);
+      //console.log(data.survey);
       return data.survey;
       
     } catch (err) {
@@ -50,6 +50,7 @@ function App() {
     })
     .then(function (response) {
         console.log(response);
+        window.location = "/";
     }).catch(function(response){
       console.log(response);
     })    

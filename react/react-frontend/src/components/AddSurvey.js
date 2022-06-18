@@ -25,21 +25,6 @@ const AddSurvey = () => {
       //changeEmail.style.display = "block";
     })
   };
-    // const res = await fetch("http://127.0.0.1:8000/api/v1/admin/addsurvey", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(titleItem),
-    // }).catch(function(error) {  
-
-    //   console.log('Request failed', error)  
-    // })
-    // const data = await res.json();
-    // console.log(data);
-    // localStorage.setItem("survey_id", data['items']['id']);
-    // console.log(data['items']['id']);
-    
     //setUsers([...users, data]);
   
   return (

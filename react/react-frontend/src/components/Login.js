@@ -47,17 +47,19 @@ const Login = ({addTask}) => {
       let type = response.data["type"]
       console.log(type);
       console.log(user_id);
-      if(user_id){
-        localStorage.setItem('token', user_id)
-        //window.location = "file:///C:/Users/Fadel/e-commerce/e-commerce-backend/e-commerce-frontend/index.html";
+      if(type == 1){
+        //localStorage.setItem('token', user_id)
+        console.log("True Admin");
+        window.location = "/AddSurvey";
       }
       else{
-        console.log("error fadel");
+        console.log("True User");
+        window.location = "/DisplaySurvey";
         //invalidEmail.style.display="block";
       }
     })
     }).catch(function(response){
-      console.log("erroe fadel");
+      //console.log("erroe fadel");
       //invalidPE.style.display = "block";
     })
    // setUsers([...users, data]);
@@ -94,6 +96,7 @@ const Login = ({addTask}) => {
         <input type={"submit"} value="Login" className="btn btn-block" />
         <div className='divider'/>
         <button className='btn btn-register'><Link className='link' to="/Register">Register</Link></button>
+
       </form>
     </div>
   )
