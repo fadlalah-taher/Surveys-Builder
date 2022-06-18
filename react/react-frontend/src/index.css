@@ -49,7 +49,8 @@ body {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: 80%;
+  margin-bottom: 15px;
 }
 
 .task {
@@ -109,12 +110,18 @@ form input:focus{
 }
 
 .form-control {
-  margin: 20px 0;
+  width: 80%;
+  margin: 10px 0;
+  display: flex;
+  gap:20px;
 }
 
-.form-control label {
+/* .form-control label {
   display: block;
-}
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+} */
 
 .form-control input {
   width: 100%;

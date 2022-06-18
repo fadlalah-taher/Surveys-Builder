@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 
 Route::group(['prefix' => 'v1'], function(){
+    
     Route::group(['middleware' => 'api'], function($router) {
         Route::post('/register', [JWTController::class, 'register']);
         Route::post('/login', [JWTController::class, 'login']);
@@ -29,8 +30,5 @@ Route::group(['prefix' => 'v1'], function(){
     Route::post('/getoptions', [QuestionController::class, 'getOptionByQuestionId']);
 
     Route::post('/addanswer', [QuestionController::class, 'addAnswer']);
-
-
-
 
 });

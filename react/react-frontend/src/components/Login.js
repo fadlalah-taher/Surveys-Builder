@@ -39,7 +39,7 @@ const Login = ({addTask}) => {
     <div className='right-container'>
       <form className="add-form" onSubmit={onLogin}>
         <div className="form-control">
-          <label>Email</label>
+          {/* <label>Email</label> */}
           <input
             type="text"
             placeholder={"Full Name"}
@@ -51,7 +51,7 @@ const Login = ({addTask}) => {
         </div>
 
         <div className="form-control">
-          <label>Password</label>
+          {/* <label>Password</label> */}
           <input
             type="password"
             placeholder={"Password"}
