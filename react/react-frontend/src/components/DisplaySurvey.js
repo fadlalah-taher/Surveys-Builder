@@ -1,9 +1,9 @@
 import React from 'react'
-import axios from 'axios'
+import axios from 'axios';
 
 const DisplaySurvey = () => {
 
-    
+
   return (
     <div className='display-survey'>
       <div className='survey-card'>

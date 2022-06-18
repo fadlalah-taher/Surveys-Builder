@@ -44,6 +44,8 @@ const Login = ({addTask}) => {
     })
     .then(function(response){
       let user_id = response.data["id"]
+      let type = response.data["type"]
+      console.log(type);
       console.log(user_id);
       if(user_id){
         localStorage.setItem('token', user_id)
