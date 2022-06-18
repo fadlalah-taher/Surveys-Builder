@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
 import Register from './Register';
+import axios from 'axios';
 
 const Login = ({addTask}) => {
     const [email , setEmail] = useState("");
@@ -22,20 +23,56 @@ const Login = ({addTask}) => {
       e.preventDefault();
       let item = {email,password};
       console.log(item);
-      const res = await fetch("http://127.0.0.1:8000/api/v1/login", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        "Accept": 'application/json'
-      },
-      body: JSON.stringify(item),
-    }).catch(function(error) {  
 
-      console.log('Request failed', error)  
+      axios({
+        method: 'post',
+        url: 'http://127.0.0.1:8000/api/v1/login',
+        data: item,
     })
-    const data = await res.json();
-    console.log(data['access_token']);
-    console.log(data['email']);
+    .then(function (response) {
+        var token = response.data["access_token"];
+      localStorage.setItem("access_token", token);
+      console.log("hi");
+      console.log(token);
+      axios({
+      method: 'post',
+      url: 'http://127.0.0.1:8000/api/v1/profile',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept':'application/json'
+      },
+    })
+    .then(function(response){
+      let user_id = response.data["id"]
+      console.log(user_id);
+      if(user_id){
+        localStorage.setItem('token', user_id)
+        //window.location = "file:///C:/Users/Fadel/e-commerce/e-commerce-backend/e-commerce-frontend/index.html";
+      }
+      else{
+        console.log("error fadel");
+        //invalidEmail.style.display="block";
+      }
+    })
+    }).catch(function(response){
+      console.log("erroe fadel");
+      //invalidPE.style.display = "block";
+    })
+      ///////////////////////
+    //   const res = await fetch("http://127.0.0.1:8000/api/v1/login", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //     "Accept": 'application/json'
+    //   },
+    //   body: JSON.stringify(item),
+    // }).catch(function(error) {  
+
+    //   console.log('Request failed', error)  
+    // })
+    // const data = await res.json();
+    // console.log(data['access_token']);
+    // console.log(data['email']);
     //let email = data['email'];
    // setUsers([...users, data]);
 }
