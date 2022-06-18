@@ -2,8 +2,8 @@ import React from 'react'
 
 const Survey = () => {
   return (
-    <div>
-      
+    <div className='Survey'>
+      <div></div>
     </div>
   )
 }

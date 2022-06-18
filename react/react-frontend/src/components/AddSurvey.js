@@ -44,7 +44,6 @@ const AddSurvey = () => {
         </div>
         {field ? <div className='forget'>Fill the field!</div> : ""}
         <input type={"submit"} value="Add" className="btn btn-block" />
-        <div className='divider'/>
       </form>
     </div>
   )
