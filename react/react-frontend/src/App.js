@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './components/Login';
 import Register from './components/Register'
 import Nav from './components/Nav';
+import axios from 'axios';
 import DisplaySurvey from './components/DisplaySurvey';
 import { useState } from "react";
 import AddSurvey from './components/AddSurvey';
@@ -16,20 +17,17 @@ function App() {
 
   //Adding a Task
   const addTask = async (e) => {
-    const res = await fetch("http://127.0.0.1:8000/api/v1/register", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(e),
-    }).catch(function(error) {  
-
-      console.log('Request failed', error)  
+    axios({
+      method: 'post',
+      url: 'http://127.0.0.1:8000/api/v1/register',
+      data: e,
     })
-    const data = await res.json();
-    console.log(data);
-    
-    setUsers([...users, data]);
+    .then(function (response) {
+        console.log(response);
+    }).catch(function(response){
+      console.log(response);
+    })    
+    // setUsers([...users, data]);
   };
 
   return (

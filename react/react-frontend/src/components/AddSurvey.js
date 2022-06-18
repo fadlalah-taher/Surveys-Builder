@@ -24,6 +24,7 @@ const AddSurvey = () => {
       console.log(response);
       //changeEmail.style.display = "block";
     })
+  };
     // const res = await fetch("http://127.0.0.1:8000/api/v1/admin/addsurvey", {
     //   method: "POST",
     //   headers: {
@@ -40,7 +41,7 @@ const AddSurvey = () => {
     // console.log(data['items']['id']);
     
     //setUsers([...users, data]);
-  };
+  
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={addSurvey}>
