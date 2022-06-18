@@ -7,6 +7,8 @@ import axios from 'axios';
 const Login = ({addTask}) => {
     const [email , setEmail] = useState("");
     const [password , setPwd] = useState("");
+
+    const [field, setField] = useState(false);
     //const [user , setUser] = useState("");
 
     // const onSubmit = (e) => {
@@ -32,7 +34,7 @@ const Login = ({addTask}) => {
     .then(function (response) {
         var token = response.data["access_token"];
       localStorage.setItem("access_token", token);
-      console.log("hi");
+      //console.log("hi");
       console.log(token);
       axios({
       method: 'post',
@@ -59,6 +61,7 @@ const Login = ({addTask}) => {
       }
     })
     }).catch(function(response){
+      setField(true);
       //console.log("erroe fadel");
       //invalidPE.style.display = "block";
     })
@@ -92,7 +95,7 @@ const Login = ({addTask}) => {
             }}
           />
         </div>
-        <div  className='forget'>Invalid email or password!</div>
+        {field ? <div  className='forget'>Invalid email or password!</div> : ""}
         <input type={"submit"} value="Login" className="btn btn-block" />
         <div className='divider'/>
         <button className='btn btn-register'><Link className='link' to="/Register">Register</Link></button>

@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const AddSurvey = () => {
     const [title , setTitle] = useState("");
+    const [field, setField] = useState(false);
 
     //const [password , setPwd] = useState("");
      //Adding a Survey
@@ -19,14 +20,14 @@ const AddSurvey = () => {
         console.log(response);
         localStorage.setItem("survey_id", response.data['items']['id']);
         console.log(response.data['items']['id']);
-      
+        window.location = '/AddQuestion';
     }).catch(function(response){
       console.log(response);
+      setField(true);
       //changeEmail.style.display = "block";
     })
   };
     //setUsers([...users, data]);
-  
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={addSurvey}>
@@ -41,7 +42,7 @@ const AddSurvey = () => {
             }}
           />
         </div>
-
+        {field ? <div className='forget'>Fill the field!</div> : ""}
         <input type={"submit"} value="Add" className="btn btn-block" />
         <div className='divider'/>
       </form>

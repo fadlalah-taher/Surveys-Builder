@@ -140,7 +140,7 @@ form input:focus{
   color: rgb(239, 79, 95);
   font-family: 'Arial';
   font-size: 14px;
-  display: none;
+  /* display: none; */
 }
 .nav{
   display: flex;
