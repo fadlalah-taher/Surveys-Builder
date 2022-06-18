@@ -92,7 +92,9 @@ function App() {
         path='/DisplaySurvey'
         element={
           <>
-          <DisplaySurvey/>
+          <DisplaySurvey
+          surveys={surveys}
+          />
           </>
         }
         >

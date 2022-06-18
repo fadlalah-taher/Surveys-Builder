@@ -1,7 +1,7 @@
-import { useState, useEffect} from 'react';
+import { useState} from 'react';
 import { Link } from "react-router-dom";
 
-import Register from './Register';
+//import Register from './Register';
 import axios from 'axios';
 
 const Login = ({addTask}) => {
@@ -60,22 +60,6 @@ const Login = ({addTask}) => {
       console.log("erroe fadel");
       //invalidPE.style.display = "block";
     })
-      ///////////////////////
-    //   const res = await fetch("http://127.0.0.1:8000/api/v1/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //     "Accept": 'application/json'
-    //   },
-    //   body: JSON.stringify(item),
-    // }).catch(function(error) {  
-
-    //   console.log('Request failed', error)  
-    // })
-    // const data = await res.json();
-    // console.log(data['access_token']);
-    // console.log(data['email']);
-    //let email = data['email'];
    // setUsers([...users, data]);
 }
 

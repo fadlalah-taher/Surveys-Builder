@@ -1,28 +1,24 @@
 import React from 'react'
-import axios from 'axios';
+//import axios from 'axios';
 
 const DisplaySurvey = ({surveys}) => {
 
 
   return (
-    <div className='display-survey'>
+    //<div className='display-survey'>
+    <>
       {surveys.map((survey) => (
         <div className='survey-card'>
-        <div className='title-survey'>
-            <p>Hello word</p>
+            <div className='title-survey'>
+                <p>{survey.id}</p>
+            </div>
+            <div>
+                <input type={"submit"} value="Start" className="btn btn--survey" />
+            </div>
         </div>
-        <div>
-            <input type={"submit"} value="Start" className="btn btn--survey" />
-        </div>
-      </div>
-        // <Task
-        //   key={survey.id}
-        //   task={survey}
-        // //   onDelete={onDelete}
-        // //   onToggle={onToggle}
-        // />
       ))}
-    </div>
+      </>
+    //</div>
   )
 }
 
