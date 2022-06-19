@@ -227,6 +227,7 @@ footer {
 }
 .title-survey{
   width: 100%;
+  /* background-color: #2577fd; */
   background-color: black;
   height: 60%;
   font-size: 40px;
@@ -250,6 +251,7 @@ footer {
     margin-top: 40px;
   }
 }
+
 @media (max-width: 950px) {
   form{
     margin-top: 30px;

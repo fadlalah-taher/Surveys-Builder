@@ -1,13 +1,14 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
 import Login from './components/Login';
 import Register from './components/Register'
 import Nav from './components/Nav';
-import axios from 'axios';
 import DisplaySurvey from './components/DisplaySurvey';
-import { useState, useEffect } from "react";
 import AddSurvey from './components/AddSurvey';
+import AddQuestion from './components/AddQuestion';
 
 //import Register from './components/Register';
 
@@ -103,7 +104,13 @@ function App() {
           </>
         }
         >
-
+        </Route>
+        <Route
+        path='/AddQuestion'
+        element={
+          <AddQuestion/>
+        }
+        >
         </Route>
 
       </Routes>

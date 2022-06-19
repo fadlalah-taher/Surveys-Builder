@@ -24,7 +24,6 @@ const AddSurvey = () => {
     }).catch(function(response){
       console.log(response);
       setField(true);
-      //changeEmail.style.display = "block";
     })
   };
     //setUsers([...users, data]);
