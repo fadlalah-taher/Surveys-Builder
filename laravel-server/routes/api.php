@@ -33,7 +33,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::post('/getquestions', [QuestionController::class, 'getQuestionBySurveyId']);
 
-    Route::post('/getoptions', [OptionController::class, 'getOptionByQuestionId']);
+    Route::post('/getoptions', [OptionController::class, 'getOptionsByQuestionId']);
 
     Route::post('/addanswer', [AnswerController::class, 'addAnswer']);
 
