@@ -53,6 +53,7 @@ body {
 }
 .btn--survey{
   margin-bottom: 20px;
+  background-color: #2577fd;
 }
 .btn-block {
   display: block;
@@ -178,16 +179,18 @@ form input:focus{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 200px;
-  background-color: #788ba8;
+  width: 450px;
+  height: 280px;
+  background-color: #2577fd;
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 5%;
   margin-left: 35%;
+  color: white;
 }
 .question-title{
   font-size: 25px;
+  font-weight: 900;
   margin-bottom: 10px;
   color: white;
 }
@@ -197,6 +200,7 @@ form input:focus{
   gap: 10px;
   font-size: 20px;
 }
+
 .checkbox-group{
   display: flex;
   flex-direction: column;
@@ -326,8 +330,7 @@ footer {
 }
 .title-survey{
   width: 100%;
-  /* background-color: #2577fd; */
-  background-color: black;
+  background-color: #2577fd;
   height: 60%;
   font-size: 40px;
   display: flex;
@@ -354,5 +357,16 @@ footer {
 @media (max-width: 950px) {
   form{
     margin-top: 30px;
+  }
+  .question-item{
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 650px) {
+  .question-item{
+    width: 350px;
+    height: 220px;
+    margin-left: 18%;
   }
 }

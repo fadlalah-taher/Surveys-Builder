@@ -75,6 +75,7 @@ const QuestionItem = ({text, question_id, type}) => {
             return (<div className=''>CheckBox Loading .......</div>)
         }
     }
+        
 }
 
 export default QuestionItem

@@ -13,9 +13,6 @@ import Survey from './components/Survey';
 import AddOptions from './components/AddOptions';
 import QuestionContainer from './components/QuestionContainer';
 
-
-//import Register from './components/Register';
-
 function App() {
 
   // Initialize State

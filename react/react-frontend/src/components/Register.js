@@ -9,6 +9,7 @@ const Register = ({onAdd}) => {
   const [password, setPassword] = useState("");
 
   const [field, setField] = useState(false);
+  
    //Add Data to Backend on Submit
    const onSubmit = (e) => {
     e.preventDefault();
