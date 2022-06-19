@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const QuestionItem = ({text, question_id, type}) => {
-
+    console.log(question_id);
     const [options, setOptions] = useState("");
     const fetchOptions = async () => {
         // Display Options
@@ -11,7 +11,9 @@ const QuestionItem = ({text, question_id, type}) => {
             await axios.post(`http://127.0.0.1:8000/api/v1/getoptions`,{question_id: question_id})
             .then(res =>{
                 const mydata = res.data;
-                setOptions(mydata['name']);
+                console.log(mydata['options']);
+                //console.log(mydata['name']);
+                setOptions(mydata['options']);
             })
         } catch(err){
             console.log(err);
@@ -20,32 +22,36 @@ const QuestionItem = ({text, question_id, type}) => {
     useEffect(() => {
         fetchOptions();
     }, []);
-
+console.log(options);
    // var x;
     if(type === "mcq"){
         try{
             return(
-                <div className=''>
-                    <p>{text}</p>
+                <div className='question-item'>
+                    <p className='question-title'>{text}</p>
                     <div className={'radio-group'}>
-                        {options.localeCompare((value, index) => {
+                        {options.map((value, index) => {
+                            return(
                             <span key={index}>
                                 <input type="radio" value={value['id']} name={'q' + question_id}></input>
                                 {value['name']}
                             </span>
+                            )
                         })}
                     </div>
                 </div>
             );
         }catch(err){
-            return (<div className=''>lLoading...</div>)
+            return (<div className='question-item'>MCQ error</div>)
         }
     }
     if(type === "text"){
         return(
             <div className='question-item'>
-                <p>{text}</p>
-                <input type={"text"} className={'text-input'}></input>
+                <div className='question-content'>
+                    <p className='question-title'>{text}</p>
+                    <input type={"text"} className={'text-input'}></input>
+                </div>
             </div>
         );
     }
@@ -55,7 +61,7 @@ const QuestionItem = ({text, question_id, type}) => {
                 <div className='question-item'>
                     <p>{text}</p>
                     <div className={'checkbox-group'}>
-                        {options.localeCompare((value, index) => {
+                        {options.map((value, index) => {
                             return(
                             <span key={index}>
                                 <input type="checkbox" value={value['id']} name={'q' + question_id}></input>
@@ -67,7 +73,8 @@ const QuestionItem = ({text, question_id, type}) => {
                 </div>
             );
         }catch(err){
-            return (<div className=''>lishLoading...</div>)
+            console.log(err);
+            return (<div className=''>CheckBox error</div>)
         }
     }
 //   return (

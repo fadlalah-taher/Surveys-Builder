@@ -53,24 +53,14 @@ console.log("fadel addd");
             console.log(err);
         }
     }
-//     axios({
-//       method: 'post',
-//       url: 'http://127.0.0.1:8000/api/v1/admin/addquestion',
-//       data: titleItem,
-//     })
-//     .then(function (response) {
-//         console.log(response);
-//         console.log("added");
-//     }).catch(function(response){
-//       console.log(response);
-//     })
-//   };
+
   }
 return (
 <div>
     <div>
     <h1 id="header">Add Question</h1>
     <div className="form-control">
+        <label>Question: </label>
         <input
             type="text" 
         //  value={name}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Survey = () => {
+const Survey = ({text, id}) => {
   
   console.log(localStorage.getItem("survey_id"));
   return (

@@ -32,7 +32,7 @@ const AddOptions = () => {
         <div className="form-control">
       <input type={"text"} id="option_text" className=''></input></div>
       <button className='btn' onClick={()=>{submitOption()}}>submit</button>
-      <button className='btn' onClick={()=>{ window.location=""}}>Done</button>
+      <button className='btn' onClick={()=>{ window.location="/AdddQuestion"}}>Done</button>
     </div>
 
   )
