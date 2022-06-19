@@ -43,8 +43,8 @@ function App() {
     }
   };
 
-  //Adding a Task
-  const addTask = async (e) => {
+  //Adding User
+  const addUser = async (e) => {
     axios({
       method: 'post',
       url: 'http://127.0.0.1:8000/api/v1/register',
@@ -78,7 +78,7 @@ function App() {
         path='/Register'
         element={
           <>
-          <Register onAdd={addTask} />
+          <Register onAdd={addUser} />
           </>
         }
         >

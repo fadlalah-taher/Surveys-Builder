@@ -1,20 +1,37 @@
 import React from 'react';
 import { useState } from "react";
+import axios from 'axios';
 
 const AddQuestion = () => {
   const [name, setName] = useState("");
-  const [option, setOption] = useState("");
+  const [type, setType] = useState("");
 
-  const onSubmit = (e) => {
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!name) {
+  //     console.log('fill');
+  //     return;
+  //   }
+  //   //onAdd({ name, email, password});
+  //   console.log(name);
+  //   console.log(option);
+  //   console.log(localStorage.getItem("survey_id"));
+  // };
+  const onSubmit = async (e) => {
     e.preventDefault();
-    if (!name) {
-      console.log('fill');
-      return;
-    }
-    //onAdd({ name, email, password});
-    console.log(name);
-    console.log(option);
-    console.log(localStorage.getItem("survey_id"));
+    let survey_id = localStorage.getItem("survey_id")
+    let titleItem = {name, type, survey_id};
+    axios({
+      method: 'post',
+      url: 'http://127.0.0.1:8000/api/v1/admin/addquestion',
+      data: titleItem,
+    })
+    .then(function (response) {
+        console.log(response);
+        console.log("added");
+    }).catch(function(response){
+      console.log(response);
+    })
   };
 
   return (
@@ -32,7 +49,7 @@ const AddQuestion = () => {
             />
             <input type={"submit"} value="Add Question" onClick={onSubmit} className="btn btn-block" />
         </div>
-        <select value={option} onChange={(e) => {setOption(e.target.value)}}>
+        <select value={type} onChange={(e) => {setType(e.target.value)}}>
             <option value="">Choose a type</option>
             <option value="text">text</option>
             <option value="checkboxes">checkboxes</option>
