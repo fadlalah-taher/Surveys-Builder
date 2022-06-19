@@ -33,7 +33,7 @@ console.log(options);
                         {options.map((value, index) => {
                             return(
                             <span key={index}>
-                                <input type="radio" value={value['id']} name={'q' + question_id}></input>
+                                <input type="radio" value={value['id']} name={'q' + question_id} className={'radio-check'}></input>
                                 {value['name']}
                             </span>
                             )
@@ -59,12 +59,12 @@ console.log(options);
         try{
             return(
                 <div className='question-item'>
-                    <p>{text}</p>
+                    <p className='question-title'>{text}</p>
                     <div className={'checkbox-group'}>
                         {options.map((value, index) => {
                             return(
                             <span key={index}>
-                                <input type="checkbox" value={value['id']} name={'q' + question_id}></input>
+                                <input type="checkbox" value={value['id']} name={'q' + question_id} className={'radio-check'}></input>
                                 {value['name']}
                             </span>
                             )
