@@ -1,7 +1,4 @@
 import React from 'react'
-import { useState} from 'react';
-import { Link, useLinkClickHandler } from 'react-router-dom';
-//import axios from 'axios';
 
 const DisplaySurvey = ({surveys}) => {
 
@@ -9,6 +6,7 @@ const DisplaySurvey = ({surveys}) => {
     localStorage.setItem("survey_id", sId);
     window.location="/QuestionContainer";
   };
+  
   return (
     <div className='display-survey'>
       {surveys.map((survey, index) => (

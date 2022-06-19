@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const QuestionItem = ({text, question_id, type}) => {
-    console.log(question_id);
+
     const [options, setOptions] = useState("");
     const fetchOptions = async () => {
         // Display Options
@@ -72,7 +72,6 @@ const QuestionItem = ({text, question_id, type}) => {
                 </div>
             );
         }catch(err){
-            console.log(err);
             return (<div className=''>CheckBox Loading .......</div>)
         }
     }

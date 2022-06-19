@@ -8,7 +8,7 @@ import Register from './components/Register'
 import Nav from './components/Nav';
 import DisplaySurvey from './components/DisplaySurvey';
 import AddSurvey from './components/AddSurvey';
-import AdddQuestion from './components/AdddQuestion';
+import AddQuestion from './components/AddQuestion';
 import Survey from './components/Survey';
 import AddOptions from './components/AddOptions';
 import QuestionContainer from './components/QuestionContainer';
@@ -18,7 +18,7 @@ import QuestionContainer from './components/QuestionContainer';
 
 function App() {
 
-   // Initialize State
+  // Initialize State
   const [surveys, setSurveys] = useState([]);
 
 
@@ -68,7 +68,7 @@ function App() {
         <Route path='/Register'element={<><Register onAdd={addUser}/></>}> </Route>
         <Route path='/AddSurvey' element={<><AddSurvey/></>}></Route>
         <Route path='/DisplaySurvey' element={<><DisplaySurvey surveys={surveys} /></>}></Route>
-        <Route path='/AdddQuestion' element={<AdddQuestion/>}></Route>
+        <Route path='/AddQuestion' element={<AddQuestion/>}></Route>
         <Route path='/Survey' element={<Survey/>}></Route>
         <Route path='/addoptions' element={<AddOptions/>}></Route>
         <Route path='/QuestionContainer' element={<QuestionContainer/>}></Route>

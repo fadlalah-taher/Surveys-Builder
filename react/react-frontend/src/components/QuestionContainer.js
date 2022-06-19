@@ -4,7 +4,6 @@ import QuestionItem from './QuestionItem';
 
 const QuestionContainer = () => {
     var sId = localStorage.getItem("survey_id");
-    console.log(sId);
     const [questions, setQuestion] = useState('');
     const fetchQuestions = async () => {
         try{
@@ -17,7 +16,7 @@ const QuestionContainer = () => {
                     setQuestion(mydata['question']);
                 })
         } catch(err){
-            console.log(err);
+            //console.log(err);
         }
     }
 
