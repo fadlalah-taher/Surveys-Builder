@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import DisplaySurvey from './components/DisplaySurvey';
 import AddSurvey from './components/AddSurvey';
 import AddQuestion from './components/AddQuestion';
+import Survey from './components/Survey';
 
 //import Register from './components/Register';
 
@@ -22,20 +23,26 @@ function App() {
 
   // Initialize all tasks into state from backend at component load
   useEffect(() => {
-    const getTasks = async () => {
-      const surveyssFromServer = await fetchTasks();
+    const getSurveys = async () => {
+      const surveyssFromServer = await fetchSurveys();
       //console.log(surveyssFromServer);
       setSurveys(surveyssFromServer);
     };
-    getTasks();
+    getSurveys();
   }, []);
 
   //Fetch All Tasks from Backend
-  const fetchTasks = async () => {
+  const fetchSurveys = async () => {
     try {
       const res = await fetch("http://127.0.0.1:8000/api/v1/getsurveys");
       const data = await res.json();
-      //console.log(data.survey);
+    //   let myArray = data.survey;
+    //   myArray.forEach((el)=>{
+    //     console.log(el['id'])
+    // })
+      // console.log(data.survey['id']);
+      // localStorage.setItem("surveys_data", data.survey);
+      // console.log(localStorage.setItem("surveys_data", data.survey));
       return data.survey;
       
     } catch (err) {
@@ -109,6 +116,13 @@ function App() {
         path='/AddQuestion'
         element={
           <AddQuestion/>
+        }
+        >
+        </Route>
+        <Route
+        path='/Survey'
+        element={
+          <Survey/>
         }
         >
         </Route>
