@@ -19,8 +19,6 @@ import QuestionContainer from './components/QuestionContainer';
 function App() {
 
    // Initialize State
-   //const [users, setUsers] = useState([]);
-   // Initialize State
   const [surveys, setSurveys] = useState([]);
 
 
@@ -28,7 +26,6 @@ function App() {
   useEffect(() => {
     const getSurveys = async () => {
       const surveyssFromServer = await fetchSurveys();
-      //console.log(surveyssFromServer);
       setSurveys(surveyssFromServer);
     };
     getSurveys();
@@ -39,13 +36,6 @@ function App() {
     try {
       const res = await fetch("http://127.0.0.1:8000/api/v1/getsurveys");
       const data = await res.json();
-    //   let myArray = data.survey;
-    //   myArray.forEach((el)=>{
-    //     console.log(el['id'])
-    // })
-      // console.log(data.survey['id']);
-      // localStorage.setItem("surveys_data", data.survey);
-      // console.log(localStorage.setItem("surveys_data", data.survey));
       return data.survey;
       
     } catch (err) {
@@ -71,78 +61,18 @@ function App() {
 
   return (
     <BrowserRouter>
-    {/* <div> */}
     <Nav/>
       <Routes>
-        <Route
-        path='/'
-        element={
-          <>
-          <Login />
-          {/* addTask={addTask} */}
-          </>
-        }
-        > 
+        <Route path='/' element={<><Login /></>}> 
         </Route>
-        <Route
-        path='/Register'
-        element={
-          <>
-          <Register onAdd={addUser} />
-          </>
-        }
-        >
-        </Route>
-        <Route
-        path='/AddSurvey'
-        element={
-          <>
-          <AddSurvey/>
-          </>
-        }
-        >
-
-        </Route>
-        <Route
-        path='/DisplaySurvey'
-        element={
-          <>
-          <DisplaySurvey
-          
-          surveys={surveys}
-          />
-          </>
-        }
-        >
-        </Route>
-        <Route
-        path='/AdddQuestion'
-        element={
-          <AdddQuestion/>
-        }
-        >
-        </Route>
-        <Route
-        path='/Survey'
-        element={<Survey/>}
-        >
-        </Route>
-        <Route
-        path='/addoptions'
-        element={<AddOptions/>}
-        >
-        </Route>
-        <Route
-        path='/QuestionContainer'
-        element={<QuestionContainer/>}
-        >
-        </Route>
-
+        <Route path='/Register'element={<><Register onAdd={addUser}/></>}> </Route>
+        <Route path='/AddSurvey' element={<><AddSurvey/></>}></Route>
+        <Route path='/DisplaySurvey' element={<><DisplaySurvey surveys={surveys} /></>}></Route>
+        <Route path='/AdddQuestion' element={<AdddQuestion/>}></Route>
+        <Route path='/Survey' element={<Survey/>}></Route>
+        <Route path='/addoptions' element={<AddOptions/>}></Route>
+        <Route path='/QuestionContainer' element={<QuestionContainer/>}></Route>
       </Routes>
-    
-    {/* <Register onAdd={addTask} /> */}
-      
-    {/* </div> */}
     </BrowserRouter>
   );
 }
