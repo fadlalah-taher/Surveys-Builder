@@ -11,19 +11,18 @@ const QuestionItem = ({text, question_id, type}) => {
             await axios.post(`http://127.0.0.1:8000/api/v1/getoptions`,{question_id: question_id})
             .then(res =>{
                 const mydata = res.data;
-                console.log(mydata['options']);
-                //console.log(mydata['name']);
                 setOptions(mydata['options']);
             })
         } catch(err){
             console.log(err);
         }
     }
+
     useEffect(() => {
         fetchOptions();
     }, []);
-console.log(options);
-   // var x;
+
+
     if(type === "mcq"){
         try{
             return(
@@ -42,7 +41,7 @@ console.log(options);
                 </div>
             );
         }catch(err){
-            return (<div className='question-item'>MCQ error</div>)
+            return (<div className='question-item'>MCQ Loading.....</div>)
         }
     }
     if(type === "text"){
@@ -74,14 +73,9 @@ console.log(options);
             );
         }catch(err){
             console.log(err);
-            return (<div className=''>CheckBox error</div>)
+            return (<div className=''>CheckBox Loading .......</div>)
         }
     }
-//   return (
-//     <div>
-      
-//     </div>
-//   )
 }
 
 export default QuestionItem
