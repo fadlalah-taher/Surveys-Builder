@@ -23,35 +23,4 @@ const DisplaySurvey = ({surveys}) => {
 
 export default DisplaySurvey
 
-{/* <div className='survey-card'>
-        <div className='title-survey'>
-            <p>Hello word</p>
-        </div>
-        <div>
-            <input type={"submit"} value="Start" className="btn btn--survey" />
-        </div>
-      </div>
-      <div className='survey-card'>
-        <div className='title-survey'>
-            <p>Hello word</p>
-        </div>
-        <div>
-            <input type={"submit"} value="Start" className="btn btn--survey" />
-        </div>
-      </div>
-      <div className='survey-card'>
-        <div className='title-survey'>
-            <p>Hello word</p>
-        </div>
-        <div>
-            <input type={"submit"} value="Start" className="btn btn--survey" />
-        </div>
-      </div>
-      <div className='survey-card'>
-        <div className='title-survey'>
-            Hello
-        </div>
-        <div>
-            <input type={"submit"} value="Start" className="btn btn--survey" />
-        </div>
-      </div> */}
+
