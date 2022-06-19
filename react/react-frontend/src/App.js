@@ -11,6 +11,7 @@ import AddSurvey from './components/AddSurvey';
 import AdddQuestion from './components/AdddQuestion';
 import Survey from './components/Survey';
 import AddOptions from './components/AddOptions';
+import QuestionContainer from './components/QuestionContainer';
 
 
 //import Register from './components/Register';
@@ -129,6 +130,11 @@ function App() {
         <Route
         path='/addoptions'
         element={<AddOptions/>}
+        >
+        </Route>
+        <Route
+        path='/QuestionContainer'
+        element={<QuestionContainer/>}
         >
         </Route>
 
