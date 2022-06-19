@@ -5,7 +5,7 @@ import axios from 'axios';
 const AddQuestion = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
-
+  console.log("fadel add");
   // const onSubmit = (e) => {
   //   e.preventDefault();
   //   if (!name) {
@@ -50,12 +50,9 @@ const AddQuestion = () => {
             <input type={"submit"} value="Add Question" onClick={onSubmit} className="btn btn-block" />
         </div>
         <select value={type} onChange={(e) => {setType(e.target.value)}}>
-            <option value="">Choose a type</option>
-            <option value="text">text</option>
-            <option value="checkboxes">checkboxes</option>
-            <option value="dropdown">dropdown</option>
-            <option value="choices">choices</option>
-            <option value="date">date</option>
+            <option value="text">Text</option>
+            <option value="checkbox">Checkbox</option>
+            <option value="dropdown">MCQ</option>
         </select>
       </div>
     </div>

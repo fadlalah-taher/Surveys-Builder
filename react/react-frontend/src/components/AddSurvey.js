@@ -20,7 +20,7 @@ const AddSurvey = () => {
         console.log(response);
         localStorage.setItem("survey_id", response.data['items']['id']);
         console.log(response.data['items']['id']);
-        window.location = '/AddQuestion';
+        window.location = '/AdddQuestion';
     }).catch(function(response){
       console.log(response);
       setField(true);

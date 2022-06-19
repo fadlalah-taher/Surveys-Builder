@@ -8,7 +8,7 @@ import Register from './components/Register'
 import Nav from './components/Nav';
 import DisplaySurvey from './components/DisplaySurvey';
 import AddSurvey from './components/AddSurvey';
-import AddQuestion from './components/AddQuestion';
+import AdddQuestion from './components/AdddQuestion';
 import Survey from './components/Survey';
 
 //import Register from './components/Register';
@@ -113,9 +113,9 @@ function App() {
         >
         </Route>
         <Route
-        path='/AddQuestion'
+        path='/AdddQuestion'
         element={
-          <AddQuestion/>
+          <AdddQuestion/>
         }
         >
         </Route>
