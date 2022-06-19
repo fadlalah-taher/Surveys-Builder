@@ -44,29 +44,27 @@ const AdddQuestion = () => {
 
   }
 return (
-<div>
-    <div>
-    <h1 id="header">Add Question</h1>
-    <div className="form-control">
-        <label>Question: </label>
-        <input
-            type="text" 
-        //  value={name}
-            id ="question_title"
-            placeholder="Add Question" 
-            onChange={(e) => {
-            setName(e.target.value);
-        }}
-        />
-        {/* <input type={"submit"} value="Add Question" onClick={submitQuestion()} className="btn btn-block" /> */}
-    </div>
-    <select id='question_type'  onChange={() => {typeSelected()}}>
-        <option value="text">Text</option>
-        <option value="checkbox">Checkbox</option>
-        <option value="mcq">MCQ</option>
-    </select>
-    </div>
-    <button onClick={()=>{submitQuestion()}}>submit</button>
+<div className='form'>
+    <div className='form-question'>
+        <h1 id="header">Add Question</h1>
+        <div className="form-control">
+            <input
+                type="text" 
+                id ="question_title"
+                placeholder="Add Question" 
+                onChange={(e) => {
+                setName(e.target.value);
+            }}
+            />
+            {/* <input type={"submit"} value="Add Question" onClick={submitQuestion()} className="btn btn-block" /> */}
+        </div>
+        <select id='question_type'   onChange={() => {typeSelected()}}>
+            <option value="text">Text</option>
+            <option value="checkbox">Checkbox</option>
+            <option value="mcq">MCQ</option>
+        </select>
+    </div>  
+    <button className='btn-submit' onClick={()=>{submitQuestion()}}>submit</button>
 </div>
 )
 }
