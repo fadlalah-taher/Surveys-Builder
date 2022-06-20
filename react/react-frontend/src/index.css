@@ -286,6 +286,22 @@ form input:focus{
   justify-content: center;
   margin-top: 10%;
   margin-left: 30%;
+  width: 600px;
+  height: 350px;
+  /* background-color: #2577fd; */
+  /* border-radius: 10px;
+  width: 600px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3); */
+}
+.right-container-option{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 30%;
   background-color: #2577fd;
   border-radius: 10px;
   width: 600px;
@@ -293,26 +309,26 @@ form input:focus{
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
 }
 
-.right-container > .option-title{
+.right-container-option > .option-title{
   font-size: 40px;
 }
-.right-container > .form-control{
+.right-container-option > .form-control{
   width: 50%;
 }
-.right-container .form-control >input{
+.right-container-option .form-control >input{
   border-radius: 10px;
   outline: none;
   border: none;
 }
-.right-container .form-control> input:focus{
+.right-container-option .form-control> input:focus{
   border-color: #2577fd;
   box-shadow: 0 0 8px #010710;
 }
-.right-container > button{
+.right-container-option > button{
   width: 25%;
   margin-bottom: 15px;
 }
-.right-container > .btn-option:hover{
+.right-container-option > .btn-option:hover{
   box-shadow: 5px 10px #071c3c;
 }
 
@@ -357,7 +373,7 @@ footer {
 }
 .display-survey .survey-card {
   margin-top: 50px;
-  width: 32%;
+  width: 350px;
   height: 250px;
   border-radius: 20px;
   display: flex;
@@ -380,10 +396,15 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #answer_btn{
-  margin-left: 35%;
   margin-bottom: 20px;
-  width: 32%;
+  margin-top: 10px;
+  width: 200px;
 }
 #answer_btn:hover{
   box-shadow: 5px 10px #2577fd;
@@ -413,7 +434,7 @@ footer {
   .question-item{
     margin-left: 25%;
   }
-  .right-container{
+  .right-container-option{
     margin-left: 20%;
   }
 }
@@ -424,7 +445,7 @@ footer {
     height: 220px;
     margin-left: 18%;
   }
-  .right-container{
+  .right-container-option{
     margin-left: 5%;
     width: 450px;
   }

@@ -28,7 +28,7 @@ const AddOptions = () => {
     }
 
   return (
-    <div className='right-container'>
+    <div className='right-container-option'>
         <p className='option-title'>Add Option</p>
         <div className="form-control">
       <input type={"text"} id="option_text" className=''></input></div>
