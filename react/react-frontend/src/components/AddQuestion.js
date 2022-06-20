@@ -29,10 +29,7 @@ const AddQuestion = () => {
                             window.location = '/addoptions';
                         }
                         if(type_select.value === "text"){
-                            q ="";
-                            //setName=("");
-                            console.log("add");
-                            //window.location = '/Survey';
+                            console.log("added");
                         }
 
                     }
@@ -43,6 +40,9 @@ const AddQuestion = () => {
     }
 
   }
+function  submitSurvey(){
+    window.location = "/AddSurvey";
+}
 return (
 <div className='form'>
     <div className='form-question'>
@@ -52,9 +52,6 @@ return (
                 type="text" 
                 id ="question_title"
                 placeholder="Add Question" 
-            //     onChange={(e) => {
-            //     setName(e.target.value);
-            // }}
             />
         </div>
         <select id='question_type'   onChange={() => {typeSelected()}}>
@@ -63,7 +60,8 @@ return (
             <option value="mcq">MCQ</option>
         </select>
     </div>  
-    <button className='btn-submit' onClick={()=>{submitQuestion()}}>submit</button>
+    <button className='btn-submit' onClick={()=>{submitQuestion()}}>Add</button>
+    <button className='btn-submit' onClick={()=>{submitSurvey()}}>Submit Survey</button>
 </div>
 )
 }
