@@ -29,10 +29,11 @@ const AddOptions = () => {
 
   return (
     <div className='right-container'>
+        <p className='option-title'>Add Option</p>
         <div className="form-control">
       <input type={"text"} id="option_text" className=''></input></div>
-      <button className='btn' onClick={()=>{submitOption()}}>submit</button>
-      <button className='btn' onClick={()=>{ window.location="/AddQuestion"}}>Done</button>
+      <button className='btn' onClick={()=>{submitOption()}}>Add Option</button>
+      <button className='btn btn-option' onClick={()=>{ window.location="/AddQuestion"}}>Submit</button>
     </div>
 
   )

@@ -61,7 +61,7 @@ return (
         </select>
     </div>  
     <button className='btn-submit' onClick={()=>{submitQuestion()}}>Add</button>
-    <button className='btn-submit' onClick={()=>{submitSurvey()}}>Submit Survey</button>
+    <button className='btn-submit surveyBtn' onClick={()=>{submitSurvey()}}>Submit Survey</button>
 </div>
 )
 }

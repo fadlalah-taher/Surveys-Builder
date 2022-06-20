@@ -115,7 +115,6 @@ form{
   width: 400px;
   padding: 20px;
   margin-top: -50px;
-  /* margin-bottom: 25px; */
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
 }
 form input{
@@ -130,14 +129,6 @@ form input{
 form input:focus{
   border-color: #2577fd;
   box-shadow: 0 0 8px #2577fd;
-}
-.right-container{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
 }
 
 .form-control {
@@ -277,8 +268,52 @@ form input:focus{
   margin-left: 30%;
   margin-bottom: 15px;
 }
+
 .btn-submit:hover {
     box-shadow: 5px 10px #f4f4f4;
+}
+.surveyBtn:hover {
+  box-shadow: 5px 10px #0c429a;
+}
+
+/* Add option */
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 30%;
+  background-color: #2577fd;
+  border-radius: 10px;
+  width: 600px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
+}
+
+.right-container > .option-title{
+  font-size: 40px;
+}
+.right-container > .form-control{
+  width: 50%;
+}
+.right-container .form-control >input{
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.right-container .form-control> input:focus{
+  border-color: #2577fd;
+  box-shadow: 0 0 8px #010710;
+}
+.right-container > button{
+  width: 25%;
+  margin-bottom: 15px;
+}
+.right-container > .btn-option:hover{
+  box-shadow: 5px 10px #071c3c;
 }
 
 /* Form Input */
@@ -365,6 +400,10 @@ footer {
   form{
     margin-top: 40px;
   }
+  .right-container{
+    margin-left: 10%;
+    width: 500px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -374,6 +413,9 @@ footer {
   .question-item{
     margin-left: 25%;
   }
+  .right-container{
+    margin-left: 20%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -381,5 +423,9 @@ footer {
     width: 350px;
     height: 220px;
     margin-left: 18%;
+  }
+  .right-container{
+    margin-left: 5%;
+    width: 450px;
   }
 }
