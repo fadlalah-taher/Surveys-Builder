@@ -7,7 +7,6 @@ const AddSurvey = () => {
     const [title , setTitle] = useState("");
     const [field, setField] = useState(false);
 
-    //const [password , setPwd] = useState("");
      //Adding a Survey
   const addSurvey = async (e) => {
     e.preventDefault();

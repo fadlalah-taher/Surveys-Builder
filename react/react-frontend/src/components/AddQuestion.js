@@ -1,9 +1,7 @@
 import React from 'react';
-//import { useState } from "react";
 import axios from 'axios';
 
 const AddQuestion = () => {
- //const [name, setName] = useState("");
  var sId = localStorage.getItem("survey_id");
  var type_select = document.getElementById("question_type");
  function typeSelected(){

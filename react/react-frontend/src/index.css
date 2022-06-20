@@ -30,7 +30,10 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
+#header{
+  color: black;
+  margin-bottom: 10px;
+}
 /* Button */
 .btn {
   display: inline-block;
@@ -185,6 +188,7 @@ form input:focus{
   margin-top: 5%;
   color: white;
   padding: 20px 20px;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.9);
 }
 .questions-survey{
   display: flex;
