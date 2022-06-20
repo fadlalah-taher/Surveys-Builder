@@ -3,7 +3,6 @@ import axios from 'axios';
 import {useState, useEffect } from "react";
 
 
-
 import QuestionContainer from './QuestionContainer';
 
 const Survey = ({text, id}) => {
@@ -20,7 +19,6 @@ const Survey = ({text, id}) => {
         })
             .then(res => {
                 const mydata = res.data;
-                // console.log(mydata['surveys'])
                 setSurvey(mydata['survey']['title']);
             })
 

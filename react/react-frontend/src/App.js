@@ -48,20 +48,17 @@ function App() {
       data: e,
     })
     .then(function (response) {
-        console.log(response);
         window.location = "/";
     }).catch(function(response){
-      console.log(response);
+      //console.log(response);
     })    
-    // setUsers([...users, data]);
   };
 
   return (
     <BrowserRouter>
     <Nav/>
       <Routes>
-        <Route path='/' element={<><Login /></>}> 
-        </Route>
+        <Route path='/' element={<><Login /></>}> </Route>
         <Route path='/Register'element={<><Register onAdd={addUser}/></>}> </Route>
         <Route path='/AddSurvey' element={<><AddSurvey/></>}></Route>
         <Route path='/DisplaySurvey' element={<><DisplaySurvey surveys={surveys} /></>}></Route>

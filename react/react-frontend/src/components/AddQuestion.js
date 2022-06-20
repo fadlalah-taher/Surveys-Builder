@@ -1,9 +1,9 @@
 import React from 'react';
-import { useState } from "react";
+//import { useState } from "react";
 import axios from 'axios';
 
-const AdddQuestion = () => {
- const [name, setName] = useState("");
+const AddQuestion = () => {
+ //const [name, setName] = useState("");
  var sId = localStorage.getItem("survey_id");
  var type_select = document.getElementById("question_type");
  function typeSelected(){
@@ -52,9 +52,9 @@ return (
                 type="text" 
                 id ="question_title"
                 placeholder="Add Question" 
-                onChange={(e) => {
-                setName(e.target.value);
-            }}
+            //     onChange={(e) => {
+            //     setName(e.target.value);
+            // }}
             />
         </div>
         <select id='question_type'   onChange={() => {typeSelected()}}>
@@ -68,4 +68,4 @@ return (
 )
 }
 
-export default AdddQuestion
+export default AddQuestion
