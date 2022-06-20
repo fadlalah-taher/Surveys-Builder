@@ -34,12 +34,12 @@ useEffect(() => {
     fetchSurvey();
 }, []);
   
-  //console.log(localStorage.getItem("survey_id"));
+
   return (
     <div className='Survey'>
       <QuestionContainer />
       <div className='btn-container'>
-          <button className='btn btn--submitanswer' id="answer_btn">Submit</button>
+          <button className='btn' id="answer_btn">Submit</button>
       </div>
     </div>
   )

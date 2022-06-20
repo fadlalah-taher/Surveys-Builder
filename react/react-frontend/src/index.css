@@ -194,6 +194,7 @@ form input:focus{
   margin-bottom: 10px;
   color: white;
 }
+
 .radio-group{
   display: flex;
   flex-direction: column;
@@ -242,6 +243,7 @@ form input:focus{
   margin-top: 60px;
   margin-left: 30%;
   color: white;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
 }
 .form-question{
   display: flex;
@@ -327,6 +329,7 @@ footer {
   align-items: center;
   gap: 100px;
   background-color: rgb(201, 225, 231);
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
 }
 .title-survey{
   width: 100%;

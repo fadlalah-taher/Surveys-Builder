@@ -25,18 +25,19 @@ const QuestionItem = ({text, question_id, type}) => {
 
     if(type === "mcq"){
         document.getElementById('answer_btn').addEventListener("click", async function () {
-             console.log(question_id)
             var mcqs = document.getElementsByName('q' + question_id);
             for (var x of mcqs) {
                 if (x.checked) {
                      console.log(x.checked)
+                     console.log(x.value)
                     try {
                         await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
                             question_id: question_id,
                             text: x.value
                         })
-                        // .then(res => {
-                        // })
+                        .then(res => {
+                            console.log("mcq added");
+                        })
                     } catch (err) {
                          console.log(err)
                     }
@@ -52,7 +53,7 @@ const QuestionItem = ({text, question_id, type}) => {
                         {options.map((value, index) => {
                             return(
                             <span key={index}>
-                                <input type="radio" value={value['id']} name={'q' + question_id} className={'radio-check'}></input>
+                                <input type="radio" value={value['name']} name={'q' + question_id} className={'radio-check'}></input>
                                 {value['name']}
                             </span>
                             )
@@ -68,16 +69,15 @@ const QuestionItem = ({text, question_id, type}) => {
         document.getElementById('answer_btn').addEventListener("click", async function () {
             // console.log(question_id)
             var text_ansr = document.getElementById('q' + question_id).value;
-
-
              console.log(text_ansr)
             try {
                 await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
                     question_id: question_id,
                     text: text_ansr
                 })
-                    .then(res => {
-                    })
+                .then(res => {
+                    console.log("text added");
+                })
             } catch (err) {
                  console.log(err)
             }
@@ -101,14 +101,16 @@ const QuestionItem = ({text, question_id, type}) => {
             var chbs = document.getElementsByName('q' + question_id);
             for (var x of chbs) {
                 if (x.checked) {
-                     console.log(x.value)
+                     console.log(x.value);
+                     console.log(x.name);
                     try {
                         await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
                             question_id: question_id,
                             text: x.value
                         })
-                            .then(res => {
-                            })
+                        .then(res => {
+                            console.log("checkbox added");
+                        })
                     } catch (err) {
                          console.log(err)
                     }
@@ -126,7 +128,7 @@ const QuestionItem = ({text, question_id, type}) => {
                         {options.map((value, index) => {
                             return(
                             <span key={index}>
-                                <input type="checkbox" value={value['id']} name={'q' + question_id} className={'radio-check'}></input>
+                                <input type="checkbox" value={value['name']} name={'q' + question_id} className={'radio-check'}></input>
                                 {value['name']}
                             </span>
                             )

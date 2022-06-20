@@ -1,6 +1,7 @@
 import React from 'react'
-import { useState} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
+
 
 const AddSurvey = () => {
     const [title , setTitle] = useState("");
@@ -26,7 +27,7 @@ const AddSurvey = () => {
       setField(true);
     })
   };
-    //setUsers([...users, data]);
+
   return (
     <div className='right-container'>
       <form className="add-form" onSubmit={addSurvey}>
