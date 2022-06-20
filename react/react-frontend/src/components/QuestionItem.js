@@ -18,12 +18,32 @@ const QuestionItem = ({text, question_id, type}) => {
         }
     }
 
-    useEffect(() => {
+     useEffect(() => {
         fetchOptions();
     }, []);
 
 
     if(type === "mcq"){
+        document.getElementById('answer_btn').addEventListener("click", async function () {
+             console.log(question_id)
+            var mcqs = document.getElementsByName('q' + question_id);
+            for (var x of mcqs) {
+                if (x.checked) {
+                     console.log(x.checked)
+                    try {
+                        await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
+                            question_id: question_id,
+                            text: x.value
+                        })
+                        // .then(res => {
+                        // })
+                    } catch (err) {
+                         console.log(err)
+                    }
+                }
+            }
+        })
+
         try{
             return(
                 <div className='question-item'>
@@ -45,16 +65,59 @@ const QuestionItem = ({text, question_id, type}) => {
         }
     }
     if(type === "text"){
+        document.getElementById('answer_btn').addEventListener("click", async function () {
+            // console.log(question_id)
+            var text_ansr = document.getElementById('q' + question_id).value;
+
+
+             console.log(text_ansr)
+            try {
+                await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
+                    question_id: question_id,
+                    text: text_ansr
+                })
+                    .then(res => {
+                    })
+            } catch (err) {
+                 console.log(err)
+            }
+
+
+        })
+
+
         return(
             <div className='question-item'>
                 <div className='question-content'>
                     <p className='question-title'>{text}</p>
-                    <input type={"text"} className={'text-input'}></input>
+                    <input type={"text"} className={'text-input'} id={'q' + question_id}></input>
                 </div>
             </div>
         );
     }
     if(type === 'checkbox'){
+        document.getElementById('answer_btn').addEventListener("click", async function () {
+            // console.log(question_id)
+            var chbs = document.getElementsByName('q' + question_id);
+            for (var x of chbs) {
+                if (x.checked) {
+                     console.log(x.value)
+                    try {
+                        await axios.post(`http://127.0.0.1:8000/api/v1/addanswer`, {
+                            question_id: question_id,
+                            text: x.value
+                        })
+                            .then(res => {
+                            })
+                    } catch (err) {
+                         console.log(err)
+                    }
+                }
+            }
+        })
+
+
+
         try{
             return(
                 <div className='question-item'>
@@ -74,8 +137,7 @@ const QuestionItem = ({text, question_id, type}) => {
         }catch(err){
             return (<div className=''>CheckBox Loading .......</div>)
         }
-    }
-        
+    } 
 }
 
 export default QuestionItem
