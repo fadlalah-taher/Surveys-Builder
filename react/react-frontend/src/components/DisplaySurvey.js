@@ -4,7 +4,8 @@ const DisplaySurvey = ({surveys}) => {
 
   function redirectSurvey (sId) {
     localStorage.setItem("survey_id", sId);
-    window.location="/QuestionContainer";
+    //window.location="/QuestionContainer";
+    window.location="/Survey";
   };
   
   return (

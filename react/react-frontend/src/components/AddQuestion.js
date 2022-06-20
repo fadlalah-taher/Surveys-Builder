@@ -29,7 +29,8 @@ const AdddQuestion = () => {
                             window.location = '/addoptions';
                         }
                         if(type_select.value === "text"){
-                            
+                            q ="";
+                            //setName=("");
                             console.log("add");
                             //window.location = '/Survey';
                         }
