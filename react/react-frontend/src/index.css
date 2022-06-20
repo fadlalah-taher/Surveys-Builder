@@ -171,20 +171,26 @@ form input:focus{
   border-radius: 50%;
   margin-left: 20px;
 }
+/* Question Item */
 .question-item{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
+  justify-content: start;
+  align-items: flex-start;
+  width: 500px;
   height: 280px;
   background-color: #2577fd;
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 5%;
-  margin-left: 35%;
   color: white;
   padding: 20px 20px;
+}
+.questions-survey{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .question-title{
   font-size: 25px;
@@ -192,12 +198,13 @@ form input:focus{
   margin-bottom: 10px;
   color: white;
 }
-
 .radio-group{
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .checkbox-group{
@@ -205,12 +212,15 @@ form input:focus{
   flex-direction: column;
   gap: 10px;
   font-size: 20px; 
+  margin-top: 10px;
+  margin-left: 20px;
 }
+
 .radio-check{
   margin-left: -10px;
 }
 .question-content{
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,6 +240,11 @@ form input:focus{
   outline: none;
   font-size: 16px; 
 }
+.text-input:focus{
+  border-color: #2577fd;
+  box-shadow: 0 0 8px #010710;
+}
+
 /* Add Question Form*/
 .form{
   width: 500px;
@@ -301,11 +316,6 @@ form input:focus{
   margin-left: 30%;
   width: 600px;
   height: 350px;
-  /* background-color: #2577fd; */
-  /* border-radius: 10px;
-  width: 600px;
-  height: 350px;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3); */
 }
 .right-container-option{
   display: flex;
@@ -420,6 +430,10 @@ footer {
 #answer_btn:hover{
   box-shadow: 5px 10px #2577fd;
 }
+.Survey{
+  display: flex;
+  flex-direction: column;
+}
 
 /* Media Query*/
 
@@ -436,9 +450,6 @@ footer {
   form{
     margin-top: 30px;
   }
-  .question-item{
-    margin-left: 25%;
-  }
   .right-container-option{
     width: 500px;
   } 
@@ -448,7 +459,6 @@ footer {
   .question-item{
     width: 350px;
     height: 220px;
-    margin-left: 18%;
   }
   .right-container-option{
     width: 400px;

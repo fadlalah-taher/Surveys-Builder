@@ -82,7 +82,6 @@ const QuestionItem = ({text, question_id, type}) => {
 
         })
 
-
         return(
             <div className='question-item'>
                 <div className='question-content'>

@@ -26,7 +26,7 @@ const QuestionContainer = () => {
 
     try{
   return (
-    <div className='questions-container'>
+    <div className='questions-survey'>
         {questions.map((value, index)=>{
             return(
                 <QuestionItem key={index} text={value['name']} question_id={value['id']} type={value['type']}/>
