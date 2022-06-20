@@ -6,8 +6,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
-
+.body{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   max-width: 500px;
   margin: 30px auto;
@@ -226,14 +232,12 @@ form input:focus{
 }
 /* Add Question Form*/
 .form{
-  width: 600px;
+  width: 500px;
   height: 350px;
   background-color:#2577fd;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-  margin-left: 30%;
   color: white;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
 }
@@ -250,6 +254,15 @@ form input:focus{
   border: none;
   border-radius: 10px;
   font-size: 20px;
+}
+#question_title{
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+#question_title:focus{
+  border-color: #2577fd;
+  box-shadow: 0 0 15px #000000;
 }
 .btn-submit {
   display: inline-block;
@@ -278,7 +291,7 @@ form input:focus{
 
 /* Add option */
 
-.right-container{
+.right-containerrrr{
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -300,8 +313,6 @@ form input:focus{
   align-content: center;
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
-  margin-left: 30%;
   background-color: #2577fd;
   border-radius: 10px;
   width: 600px;
@@ -418,13 +429,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  form{
-    margin-top: 40px;
-  }
-  .right-container{
-    margin-left: 10%;
-    width: 500px;
-  }
+  
 }
 
 @media (max-width: 950px) {
@@ -435,8 +440,8 @@ footer {
     margin-left: 25%;
   }
   .right-container-option{
-    margin-left: 20%;
-  }
+    width: 500px;
+  } 
 }
 
 @media (max-width: 650px) {
@@ -446,7 +451,10 @@ footer {
     margin-left: 18%;
   }
   .right-container-option{
-    margin-left: 5%;
-    width: 450px;
+    width: 400px;
+  }
+  .form{
+    width: 400px;
+    height: 350px;
   }
 }

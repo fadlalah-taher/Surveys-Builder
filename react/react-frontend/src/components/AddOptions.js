@@ -28,12 +28,14 @@ const AddOptions = () => {
     }
 
   return (
-    <div className='right-container-option'>
-        <p className='option-title'>Add Option</p>
-        <div className="form-control">
-      <input type={"text"} id="option_text" className=''></input></div>
-      <button className='btn' onClick={()=>{submitOption()}}>Add Option</button>
-      <button className='btn btn-option' onClick={()=>{ window.location="/AddQuestion"}}>Submit</button>
+    <div className='body'>
+        <div className='right-container-option'>
+            <p className='option-title'>Add Option</p>
+            <div className="form-control">
+        <input type={"text"} id="option_text" placeholder='Add an option'></input></div>
+        <button className='btn' onClick={()=>{submitOption()}}>Add Option</button>
+        <button className='btn btn-option' onClick={()=>{ window.location="/AddQuestion"}}>Submit</button>
+        </div>
     </div>
 
   )

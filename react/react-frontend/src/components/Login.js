@@ -49,35 +49,37 @@ const Login = ({addTask}) => {
 }
 
   return (
-    <div className='right-container'>
-      <form className="add-form" onSubmit={onLogin}>
-        <h1>Login</h1>
-        <div className="form-control">
-          <input
-            type="text"
-            placeholder={"Full Name"}
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-        </div>
+    <div className='body'>
+      <div className='right-container'>
+        <form className="add-form" onSubmit={onLogin}>
+          <h1>Login</h1>
+          <div className="form-control">
+            <input
+              type="text"
+              placeholder={"Full Name"}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
 
-        <div className="form-control">
-          <input
-            type="password"
-            placeholder={"Password"}
-            value={password}
-            onChange={(e) => {
-              setPwd(e.target.value);
-            }}
-          />
-        </div>
-        {field ? <div  className='forget'>Invalid email or password!</div> : ""}
-        <input type={"submit"} value="Login" className="btn btn-block" />
-        <div className='divider'/>
-        <button className='btn btn-register'><Link className='link' to="/Register">Register</Link></button>
-      </form>
+          <div className="form-control">
+            <input
+              type="password"
+              placeholder={"Password"}
+              value={password}
+              onChange={(e) => {
+                setPwd(e.target.value);
+              }}
+            />
+          </div>
+          {field ? <div  className='forget'>Invalid email or password!</div> : ""}
+          <input type={"submit"} value="Login" className="btn btn-block" />
+          <div className='divider'/>
+          <button className='btn btn-register'><Link className='link' to="/Register">Register</Link></button>
+        </form>
+      </div>
     </div>
   )
 }

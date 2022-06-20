@@ -44,25 +44,27 @@ function  submitSurvey(){
     window.location = "/AddSurvey";
 }
 return (
-<div className='form'>
-    <div className='form-question'>
-        <h1 id="header">Add Question</h1>
-        <div className="form-control">
-            <input
-                type="text" 
-                id ="question_title"
-                placeholder="Add Question" 
-            />
+    <div className='body'>
+        <div className='form'>
+            <div className='form-question'>
+                <h1 id="header">Add Question</h1>
+                <div className="form-control">
+                    <input
+                        type="text" 
+                        id ="question_title"
+                        placeholder="Add Question" 
+                    />
+                </div>
+                <select id='question_type'   onChange={() => {typeSelected()}}>
+                    <option value="text">Text</option>
+                    <option value="checkbox">Checkbox</option>
+                    <option value="mcq">MCQ</option>
+                </select>
+            </div>  
+            <button className='btn-submit' onClick={()=>{submitQuestion()}}>Add</button>
+            <button className='btn-submit surveyBtn' onClick={()=>{submitSurvey()}}>Submit Survey</button>
         </div>
-        <select id='question_type'   onChange={() => {typeSelected()}}>
-            <option value="text">Text</option>
-            <option value="checkbox">Checkbox</option>
-            <option value="mcq">MCQ</option>
-        </select>
-    </div>  
-    <button className='btn-submit' onClick={()=>{submitQuestion()}}>Add</button>
-    <button className='btn-submit surveyBtn' onClick={()=>{submitSurvey()}}>Submit Survey</button>
-</div>
+    </div>
 )
 }
 

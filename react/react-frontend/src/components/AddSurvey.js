@@ -29,22 +29,24 @@ const AddSurvey = () => {
   };
 
   return (
-    <div className='right-container'>
-      <form className="add-form" onSubmit={addSurvey}>
-        <h1>Add Survey</h1>
-        <div className="form-control">
-          <input
-            type="text"
-            placeholder={"Title"}
-            value={title}
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
-          />
-        </div>
-        {field ? <div className='forget'>Fill the field!</div> : ""}
-        <input type={"submit"} value="Add" className="btn btn-block" />
-      </form>
+    <div className='body'>
+      <div className='right-container'>
+        <form className="add-form" onSubmit={addSurvey}>
+          <h1>Add Survey</h1>
+          <div className="form-control">
+            <input
+              type="text"
+              placeholder={"Title"}
+              value={title}
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+            />
+          </div>
+          {field ? <div className='forget'>Fill the field!</div> : ""}
+          <input type={"submit"} value="Add" className="btn btn-block" />
+        </form>
+      </div>
     </div>
   )
 }
