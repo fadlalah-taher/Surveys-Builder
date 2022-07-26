@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 //import Register from './Register';
 import axios from 'axios';
 
+import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
+import { FaEnvelope } from "react-icons/fa";
+import { MdOutlineLock } from "react-icons/md";
+import { MdEnhancedEncryption } from "react-icons/md";
+
 const Login = ({addTask}) => {
     const [email , setEmail] = useState("");
     const [password , setPwd] = useState("");
 
     const [field, setField] = useState(false);
+    const [passwordState, setPasswordState] = useState(false);
 
     async function onLogin(e){
       e.preventDefault();
@@ -48,15 +54,20 @@ const Login = ({addTask}) => {
     })
 }
 
+  const togglePassword = () => {
+    setPasswordState(prevState => !prevState);
+  }
+
   return (
     <div className='body'>
       <div className='right-container'>
         <form className="add-form" onSubmit={onLogin}>
           <h1>Login</h1>
           <div className="form-control">
+          <span className='icon'><FaEnvelope/></span>
             <input
               type="text"
-              placeholder={"Full Name"}
+              placeholder={"Email"}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -65,14 +76,16 @@ const Login = ({addTask}) => {
           </div>
 
           <div className="form-control">
+          <span className='icon'><MdEnhancedEncryption/></span>
             <input
-              type="password"
+              type={passwordState ? "text" : "password"}
               placeholder={"Password"}
               value={password}
               onChange={(e) => {
                 setPwd(e.target.value);
               }}
             />
+            <span className='icon-eye' onClick={togglePassword}>{passwordState ? <AiFillEye/> :<AiFillEyeInvisible/>}</span>
           </div>
           {field ? <div  className='forget'>Invalid email or password!</div> : ""}
           <input type={"submit"} value="Login" className="btn btn-block" />
