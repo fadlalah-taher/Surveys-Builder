@@ -86,7 +86,7 @@ const QuestionItem = ({text, question_id, type}) => {
             <div className='question-item'>
                 <div className='question-content'>
                     <p className='question-title'>{text}</p>
-                    <input type={"text"} className={'text-input'} id={'q' + question_id}></input>
+                    <input type={"text"} placeholder='Answer' className={'text-input'} id={'q' + question_id}></input>
                 </div>
             </div>
         );

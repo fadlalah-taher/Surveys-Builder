@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  background-color: #F8F8F8;
 }
 .body{
   height: 90vh;
@@ -148,6 +149,11 @@ form input:focus{
   display: flex;
   gap:20px;
 }
+.form-select {
+  position: relative;
+  width: 68%;
+  display: flex;
+}
 
 .forget{
   margin: 15px 0;
@@ -165,6 +171,7 @@ form input:focus{
   padding: 0px 15px;
   box-shadow: 0 8px 6px -6px steelblue;
   height: 15vh;
+  margin-bottom: 40px;
 }
 .nav .left {
   display: flex;
@@ -184,11 +191,13 @@ form input:focus{
   align-items: flex-start;
   width: 500px;
   height: 280px;
-  background-color: #2577fd;
+  /* background-color: #2577fd; */
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    background-color: #ffffff;
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 5%;
-  color: white;
+  color: black;
   padding: 20px 20px;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.9);
 }
@@ -202,7 +211,7 @@ form input:focus{
   font-size: 25px;
   font-weight: 900;
   margin-bottom: 10px;
-  color: white;
+  color: black;
 }
 .radio-group{
   display: flex;
@@ -235,7 +244,7 @@ form input:focus{
 }
 .question-content > p{
   font-size: 30px;
-  color: white;
+  color: black;
 }
 .text-input{
   width: 100%;
@@ -283,7 +292,7 @@ form input:focus{
 }
 #question_title:focus{
   border-color: #2577fd;
-  box-shadow: 0 0 15px #000000;
+  box-shadow: 0 0 15px #b1c0eb;
 }
 .btn-submit {
   display: inline-block;
@@ -399,29 +408,26 @@ footer {
   gap:50px;
 }
 .display-survey .survey-card {
-  margin-top: 50px;
-  width: 350px;
-  height: 250px;
-  border-radius: 20px;
+
   display: flex;
   flex-direction: column; 
   justify-content: center; 
   align-items: center;
   gap: 100px;
-  background-color: rgb(201, 225, 231);
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3);
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 12px 18px;
+  margin: 18px;
+  width: 450px;
+  height: 300px;
 }
 .title-survey{
   width: 100%;
-  background-color: #2577fd;
-  height: 60%;
-  font-size: 40px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 .btn-container{
   display: flex;
@@ -444,11 +450,22 @@ footer {
 /*Icons*/
 .icon{
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 0;
   font-size: 20px;
   color: rgb(79, 111, 239);
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-select{
+  position: absolute;
+  left: 15px;
+  top: 0;
+  font-size: 20px;
+  color: rgb(79, 111, 239);
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,6 +482,17 @@ footer {
   justify-content: center;
 }
 
+.select{
+  width: 100%;
+  padding-left: 50px;
+  color: gray;
+  border: 1px solid rgb(218, 214, 214);
+  border-radius: 5px;
+}
+.select:focus{
+  border-color: #2577fd;
+  box-shadow: 0 0 15px #b1c0eb;
+}
 /* Media Query*/
 
 @media (max-width: 869px) {
