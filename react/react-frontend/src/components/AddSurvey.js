@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react';
 import axios from 'axios';
-
+import { BsFillCalendar2MinusFill } from "react-icons/bs";
 
 const AddSurvey = () => {
     const [title , setTitle] = useState("");
@@ -33,6 +33,7 @@ const AddSurvey = () => {
         <form className="add-form" onSubmit={addSurvey}>
           <h1>Add Survey</h1>
           <div className="form-control">
+          <span className='icon'><BsFillCalendar2MinusFill/></span>  
             <input
               type="text"
               placeholder={"Title"}

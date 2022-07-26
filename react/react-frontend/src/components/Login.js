@@ -8,6 +8,7 @@ import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
 import { FaEnvelope } from "react-icons/fa";
 import { MdOutlineLock } from "react-icons/md";
 import { MdEnhancedEncryption } from "react-icons/md";
+import { FaLock } from "react-icons/fa";
 
 const Login = ({addTask}) => {
     const [email , setEmail] = useState("");
@@ -76,7 +77,7 @@ const Login = ({addTask}) => {
           </div>
 
           <div className="form-control">
-          <span className='icon'><MdEnhancedEncryption/></span>
+          <span className='icon'><FaLock/></span>
             <input
               type={passwordState ? "text" : "password"}
               placeholder={"Password"}

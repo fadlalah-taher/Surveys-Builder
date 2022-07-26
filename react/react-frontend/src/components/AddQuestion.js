@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import { GoDiffAdded } from "react-icons/go";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 const AddQuestion = () => {
  var sId = localStorage.getItem("survey_id");
  var type_select = document.getElementById("question_type");
@@ -47,17 +49,21 @@ return (
             <div className='form-question'>
                 <h1 id="header">Add Question</h1>
                 <div className="form-control">
+                <span className='icon'><GoDiffAdded/></span> 
                     <input
                         type="text" 
                         id ="question_title"
                         placeholder="Add Question" 
                     />
                 </div>
-                <select id='question_type'   onChange={() => {typeSelected()}}>
-                    <option value="text">Text</option>
-                    <option value="checkbox">Checkbox</option>
-                    <option value="mcq">MCQ</option>
-                </select>
+                <div className="form-select">
+                    <span className='icon-select'><BsFillArrowDownCircleFill/></span> 
+                    <select id='question_type' className='select'   onChange={() => {typeSelected()}}>
+                        <option value="text">Text</option>
+                        <option value="checkbox">Checkbox</option>
+                        <option value="mcq">MCQ</option>
+                    </select>
+                </div>
             </div>  
             <button className='btn-submit' onClick={()=>{submitQuestion()}}>Add</button>
             <button className='btn-submit surveyBtn' onClick={()=>{submitSurvey()}}>Submit Survey</button>

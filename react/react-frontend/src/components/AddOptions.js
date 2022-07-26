@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 
+import { GoDiffAdded } from "react-icons/go";
 const AddOptions = () => {
     var qId = localStorage.getItem("question_id");
 
@@ -32,9 +33,11 @@ const AddOptions = () => {
         <div className='right-container-option'>
             <p className='option-title'>Add Option</p>
             <div className="form-control">
-        <input type={"text"} id="option_text" placeholder='Add an option'></input></div>
-        <button className='btn' onClick={()=>{submitOption()}}>Add Option</button>
-        <button className='btn btn-option' onClick={()=>{ window.location="/AddQuestion"}}>Submit</button>
+                <span className='icon'><GoDiffAdded/></span> 
+                <input type={"text"} id="option_text" placeholder='Add an option'></input>
+            </div>
+            <button className='btn' onClick={()=>{submitOption()}}>Add Option</button>
+            <button className='btn btn-option' onClick={()=>{ window.location="/AddQuestion"}}>Submit</button>
         </div>
     </div>
 
