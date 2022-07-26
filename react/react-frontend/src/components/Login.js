@@ -6,8 +6,6 @@ import axios from 'axios';
 
 import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
 import { FaEnvelope } from "react-icons/fa";
-import { MdOutlineLock } from "react-icons/md";
-import { MdEnhancedEncryption } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 
 const Login = ({addTask}) => {
